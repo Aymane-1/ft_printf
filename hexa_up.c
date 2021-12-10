@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   hexa_up.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 19:54:05 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/09 13:05:48 by aechafii         ###   ########.fr       */
+/*   Created: 2021/12/10 18:49:17 by aechafii          #+#    #+#             */
+/*   Updated: 2021/12/10 18:49:50 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include""
+#include "libft.h"
 
-int ft_printf(const char *, ...)
+void	ft_hexa_up(int n)
 {
+	long nb;
+	char hex[16] = "0123456789ABCDEF";
 
-}*/
+	nb = n;
+
+	if (nb > 15)
+	{
+		ft_hexa_up(nb / 16);
+		ft_hexa_up(nb % 16);
+	}
+	else
+		ft_putchar(hex[nb]);
+	}
+

@@ -6,18 +6,17 @@
 #    By: aechafii <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/04 19:55:05 by aechafii          #+#    #+#              #
-#    Updated: 2021/12/04 20:02:27 by aechafii         ###   ########.fr        #
+#    Updated: 2021/12/09 13:05:17 by aechafii         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-OBJ = ft_printf.c
+SRC = ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c format_specifier.c
 OBJ = $(SRC:.c=.o)
 GCC_FLAGS = -Wall -Wextra -Werror
 CC = gcc
-HEADER = libftprintf.h
-AR = ar rc
+HEADER = printf.h
+AR = ar -rc
 NAME = libftprintf.a
-
 all: $(NAME)
 
 $(NAME): $(OBJ)

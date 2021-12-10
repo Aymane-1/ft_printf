@@ -6,11 +6,12 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:08:36 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/07 21:13:41 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/09 13:21:55 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "printf.h"
 
-int	ft_putnbr(int a)
+void	ft_putnbr(int n)
 {
 	long	nb;
 

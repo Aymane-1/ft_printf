@@ -6,19 +6,23 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:05:55 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/07 21:13:55 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/09 13:15:38 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "printf.h"
 
-char	ft_putstr(char *c)
+char	ft_putstr(char *s)
 {
-	if (!s)
-		return ;
+	int i;
+
 	i = 0;
+	if(!s)
+		return NULL;
 	while (s[i])
 	{
 		write(1, &s[i], 1);
 		i++;
 	}
+	return (*s);
 }
 
