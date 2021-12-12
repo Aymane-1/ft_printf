@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c format_specifier.c
+SRC = ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_hex_low.c ft_hex_up.c ft_address.c
 OBJ = $(SRC:.c=.o)
 GCC_FLAGS = -Wall -Wextra -Werror
 CC = gcc
-HEADER = printf.h
+HEADER = ft_printf.h
 AR = ar -rc
 NAME = libftprintf.a
 all: $(NAME)

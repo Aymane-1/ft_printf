@@ -9,10 +9,11 @@
 /*   Updated: 2021/12/09 13:06:37 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "ft_printf.h"
 
-char	ft_putchar(char c)
+void	ft_putchar(char c, int *num)
 {
 	write(1, &c, 1);
+	num++;
 }
 

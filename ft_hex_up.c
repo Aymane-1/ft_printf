@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_hex_up.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 21:05:55 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/09 13:15:38 by aechafii         ###   ########.fr       */
+/*   Created: 2021/12/10 18:49:17 by aechafii          #+#    #+#             */
+/*   Updated: 2021/12/10 18:49:50 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-void	ft_putstr(char *s, int *num)
+void	ft_hex_up(unsigned long nb, int *num)
 {
-	int	i;
-
-	i = 0;
-	if (s == NULL)
-		ft_putstr("(null)", num);
-	while (s[i])
+	char *hex;
+ 
+	hex = "0123456789ABCDEF";
+	if (nb > 15)
 	{
-		ft_putchar(s[i], num);
-		i++;
+		ft_hex_up(nb / 16, num);
+		ft_hex_up(nb % 16, num);
 	}
-}
+	else
+		ft_putchar(hex[nb], num);
+	}
+
