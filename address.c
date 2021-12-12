@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   address.c                                          :+:      :+:    :+:   */
+/*   ft_address.c                                         :+:      :+:  :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 18:05:46 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/09 18:34:35 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/11 18:57:41 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "printf.h"
 
-#include <unistd.h>
-
-void	address(char *ptr)
+void 	ft_hexa_low(int n)
 {
-	int i;
+	long	nb;
+	char	*hex;
 
-	i = 0; 
-	while(ptr[i])
+	hex = "0123456789abcdef";
+	nb = n;
+	if (nb > 15)
 	{
-		write(1, &ptr[i], 1);
-		i++;
+		ft_hexa_low(nb / 16);
+		ft_hexa_low(nb % 16);
 	}
-}
+	else
+		ft_putchar(hex[nb]);
+	}
 
-int main()
+void	address(int *num)
+{
+	write(1, "0X", 2);
+	return(ft_hexa_low)
+}
