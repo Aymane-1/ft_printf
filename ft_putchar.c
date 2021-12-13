@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:05:10 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/09 13:06:37 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/13 16:57:08 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -16,4 +16,3 @@ void	ft_putchar(char c, int *num)
 	write(1, &c, 1);
 	num++;
 }
-

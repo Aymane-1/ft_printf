@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:08:36 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/09 13:21:55 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/13 16:57:22 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -29,4 +29,3 @@ void	ft_putnbr(int n, int *num)
 		ft_putnbr(nb % 10, num);
 	}
 }
-

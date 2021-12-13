@@ -6,14 +6,14 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 18:48:15 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/10 18:50:20 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/13 16:55:48 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-void ft_hex_low(unsigned long nb, int  *num)
+void	ft_hex_low(unsigned long nb, int *num)
 {
-	char *hex; 
+	char	*hex;
 
 	hex = "0123456789abcdef";
 	if (nb > 15)
@@ -23,5 +23,4 @@ void ft_hex_low(unsigned long nb, int  *num)
 	}
 	else
 		ft_putchar(hex[nb], num);
-	}
-
+}

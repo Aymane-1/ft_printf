@@ -6,12 +6,12 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 18:05:46 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/11 18:57:41 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/13 16:51:41 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-void 	ft_hexa_low(long nb, int *num)
+void	ft_hexa_low(long nb, int *num)
 {
 	char	*hex;
 
@@ -25,8 +25,8 @@ void 	ft_hexa_low(long nb, int *num)
 		ft_putchar(hex[nb], num);
 }
 
-void	address(unsigned long nb, int *num)
+void	ft_address(unsigned long nb, int *num)
 {
 	ft_putstr("0X", num);
-	ft_hexa_low(nb ,num);
+	ft_hexa_low(nb, num);
 }

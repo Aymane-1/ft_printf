@@ -6,15 +6,15 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 18:49:17 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/10 18:49:50 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/13 16:54:32 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
 void	ft_hex_up(unsigned long nb, int *num)
 {
-	char *hex;
- 
+	char	*hex;
+
 	hex = "0123456789ABCDEF";
 	if (nb > 15)
 	{
@@ -23,5 +23,4 @@ void	ft_hex_up(unsigned long nb, int *num)
 	}
 	else
 		ft_putchar(hex[nb], num);
-	}
-
+}
