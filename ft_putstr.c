@@ -6,7 +6,7 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:05:55 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/09 13:15:38 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/13 22:41:23 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -18,9 +18,12 @@ void	ft_putstr(char *s, int *num)
 	i = 0;
 	if (s == NULL)
 		ft_putstr("(null)", num);
-	while (s[i])
+	else
 	{
-		ft_putchar(s[i], num);
-		i++;
+		while (s[i])
+		{
+			ft_putchar(s[i], num);
+			i++;
+		}
 	}
 }

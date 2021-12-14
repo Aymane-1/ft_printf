@@ -6,12 +6,12 @@
 /*   By: aechafii <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 16:28:56 by aechafii          #+#    #+#             */
-/*   Updated: 2021/12/13 16:49:29 by aechafii         ###   ########.fr       */
+/*   Updated: 2021/12/14 08:59:59 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-void	format_specifier(va_list(ptr), char frmt, int *num)
+void	format_specifier(va_list ptr, char frmt, int *num)
 {
 	if (frmt == 'd')
 		ft_putnbr(va_arg(ptr, int), num);
@@ -24,7 +24,7 @@ void	format_specifier(va_list(ptr), char frmt, int *num)
 	if (frmt == 'i')
 		ft_putnbr(va_arg(ptr, int), num);
 	if (frmt == 'u')
-		ft_putnbr(va_arg(ptr, unsigned int), num);
+		ft_putnbr_u(va_arg(ptr, unsigned int), num);
 	if (frmt == 'x')
 		ft_hex_low(va_arg(ptr, unsigned int), num);
 	if (frmt == 'X')
